@@ -29,12 +29,16 @@ public class Producto {
         this.stock = stock;
     }
 
-    public Producto(String nombre, double precio, int stock) {
+    private Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
     }
-
+    
+    public static Producto crearProducto(String nombre, double precio, int stock) {
+    return new Producto(nombre, precio, stock);
+    }
+    
     public void mostrarInformacion() {
         System.out.println("Producto: " + nombre + " | Precio: " + precio + " | Stock: " + stock);
     }
