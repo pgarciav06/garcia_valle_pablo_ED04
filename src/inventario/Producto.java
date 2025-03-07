@@ -29,7 +29,7 @@ public class Producto {
         this.stock = stock;
     }
 
-    private Producto(String nombre, double precio, int stock) {
+    public Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -41,11 +41,5 @@ public class Producto {
     
     public void mostrarInformacion() {
         System.out.println("Producto: " + nombre + " | Precio: " + precio + " | Stock: " + stock);
-    }
-
-    public void borrarDatos() {
-        nombre = "";
-        precio = 0.0;
-        stock = 0;
     }
 }
